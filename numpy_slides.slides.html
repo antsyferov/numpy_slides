@@ -11830,28 +11830,22 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="NumPy">NumPy<a class="anchor-link" href="#NumPy">&#182;</a></h1>
-</div>
-</div>
-</div><aside class="notes">
+<h1 id="NumPy">NumPy<a class="anchor-link" href="#NumPy">&#182;</a></h1><ol>
+<li>Что такое NumPy?</li>
+<li>Для чего используется?</li>
+<li>Создание массивов.</li>
+<li>Доступ к массивам.</li>
+</ol>
 
+</div>
+</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Определение NumPy</p>
-
-</div>
-</div>
-</div>
-</aside><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>NumPy</strong> - это библиотека с открытым исходным кодом для языка программирования Python.</p>
+<h1 id="NumPy">NumPy<a class="anchor-link" href="#NumPy">&#182;</a></h1><p><strong>NumPy</strong> - это Python библиотека с открытым исходным кодом для работы с данными.</p>
 <p><strong>Возможности:</strong></p>
 <ul>
 <li>поддержка многомерных массивов (включая матрицы);</li>
@@ -11861,7 +11855,19 @@ a.anchor-link {
 
 </div>
 </div>
-</div></div></section></section><section><section>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>NumPy можно рассматривать как Open Source альтернативу MATLAB. MATLAB также интерпретируемый язык программирования.  И NumPy и MATLAB используют библиотеку LAPACK (Linear Algebra Package) и позволяют пользователю писать быстрые программы, поскольку операции выполняются над массивами, а не над скалярами. MATLAB был специально разработан для линейной алгебры и имеет более компактный и понятный синтаксис для базовых операций линейной алгебры. NumPy же, в свою очередь, позволяет сделать многие вещи, которые невозможны в MATLAB, а также позволяет использовать все преимущества Python. Есть Python библиотеки, которые позволяют получить тот же функционал, который доступен в MATLAB.</p>
+
+</div>
+</div>
+</div>
+</aside></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11878,7 +11884,19 @@ a.anchor-link {
 
 </div>
 </div>
-</div></section></section><section><section>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Изображение может быть представлено в виде массива, который хранит значения для RGB каналов или степени градации серого. Массивы можно использовать для хранения генома. NumPy используют для хранения и анализа данных в задачах машинного обучения. Также для хранения и анализа данных используют библиотеки pandas или GraphLab SFrame (GraphLab проприетарный, но SFrame Open Source).</p>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11887,8 +11905,8 @@ a.anchor-link {
 <h1 id="&#1048;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;-NumPy">&#1048;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077; NumPy<a class="anchor-link" href="#&#1048;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;-NumPy">&#182;</a></h1><ul>
 <li><strong>SciPy</strong> - фундаментальная библиотека для научных вычислений</li>
 <li><strong>Matplotlib</strong> - мощная библиотека для визуализации</li>
-<li><strong>IPython</strong> - улучшенная интерактивная консоль</li>
-<li><strong>Sympy</strong> - символьные вычисления</li>
+<li><strong>IPython</strong> - улучшенная интерактивная консоль (<code>pip install ipython[all]</code>)</li>
+<li><strong>SymPy</strong> - символьные вычисления</li>
 <li><strong>pandas</strong> - структуры данных и их анализ</li>
 <li><strong>scikit-learn</strong> - машинное обучение</li>
 <li><strong>scikit-image</strong> - обработка изображений</li>
@@ -11898,7 +11916,19 @@ a.anchor-link {
 
 </div>
 </div>
-</div></section></section><section><section>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Все библиотеки Open Source, имеют подробную документацию, туториалы и примеры использования. IPython - библиотека, предоставляющая множество возможностей для интерактивных вычислений и не только, является стандартным инструментом для работы с данными в Python. Данная презентация выполнена в IPython. Для Data Science удобно использовать Anaconda - платформы, которая включает в себя множество популярных библиотек для Python, R и Scala. Не зависимо от Anaconda IPython можно установить с помощью pip.</p>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11922,28 +11952,120 @@ a.anchor-link {
 
 </div>
 </div>
-</div></div><div class="fragment">
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>NumPy массивы состоят из 2 основных компонентов - буфер данных (то, что понимаем под массивом в C или Fortran - непрерывный блок памяти фиксированной длины) и информация о данных.</p>
+<ol>
+<li>Реализованы на C и Fortran</li>
+<li>Могут хранить данные только одного типа, но типы могут быть не только скалярными</li>
+<li>pandas тоже хранит данные в памяти, SFrame хранит данные в персистентом хранилище (например, на диске)</li>
+</ol>
+
+</div>
+</div>
+</div>
+</aside></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
-<span class="k">def</span> <span class="nf">describe_array</span><span class="p">(</span><span class="n">np_array</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">np_array</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Тип элементов массива: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np_array</span><span class="o">.</span><span class="n">dtype</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Число измерений (осей): </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np_array</span><span class="o">.</span><span class="n">ndim</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Размеры (форма): </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np_array</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Размер каждого элемента, байт: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np_array</span><span class="o">.</span><span class="n">itemsize</span><span class="p">))</span>
-    
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  <span class="c1"># так принято импортировать NumPy</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div></div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rows</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">columns</span> <span class="o">=</span> <span class="mi">2000</span>
+
+<span class="n">np_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">columns</span><span class="p">)</span>  <span class="c1"># ndarray со случайными значениями размерами 1000 * 2000</span>
+<span class="n">py_list</span> <span class="o">=</span> <span class="n">np_array</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>  <span class="c1"># преобразует ndarray в Python list</span>
+
+<span class="o">%</span><span class="k">timeit</span> [[elem ** 2 for elem in row] for row in py_list]  # &quot;магическая&quot; команда IPython
+<span class="o">%</span><span class="k">timeit</span> np_array ** 2  # broadcasting - возводим в квадрат каждый элемент массива
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 loop, best of 3: 198 ms per loop
+100 loops, best of 3: 2.95 ms per loop
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>IPython содержит множество "магических" команд для различных задач. Они начинаются либо с одного знака % (для строки), либо с двух %% (для целой ячейки).</p>
+
+</div>
+</div>
+</div>
+</aside><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>  <span class="c1"># для отображения изображений в IPython блокноте</span>
+<span class="k">def</span> <span class="nf">describe_array</span><span class="p">(</span><span class="n">np_array</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">np_array</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Тип элементов массива: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np_array</span><span class="o">.</span><span class="n">dtype</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Число измерений (осей): </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np_array</span><span class="o">.</span><span class="n">ndim</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Размеры (форма): </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np_array</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>  <span class="c1"># кортеж (длиной `ndim`) длины массивов по каждой оси</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Число элементов массива: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np_array</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>  <span class="c1"># произведение `np.prod()` элементов `shape`</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Размер каждого элемента, байт: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np_array</span><span class="o">.</span><span class="n">itemsize</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>IPython.display - модуль с инструментами для отображения различных объектов в IPython. Используется для отображения <code>Image</code>, <code>Audio</code>, <code>IFrame</code>, <code>YouTubeVideo</code>, математических формул и многого другого.</p>
+<p><code>repr</code> - спросить, что о нем знают</p>
+<p><code>dtype</code> - data type</p>
+<p><code>ndim</code> - number of dimensions</p>
+<p><code>shape</code> может использоваться для изменения формы массива, если количество элементов останется неизменным (<code>np_array.shape = &lt;tuple с новыми размерами&gt;</code>)</p>
+
+</div>
+</div>
+</div>
+</aside></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11955,10 +12077,10 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>  <span class="c1"># конвертируем Python массиво-подобный объект в массив</span>
 <span class="n">describe_array</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
 <span class="n">Image</span><span class="p">(</span><span class="s1">&#39;1d_array.jpeg&#39;</span><span class="p">)</span>
 </pre></div>
@@ -11977,12 +12099,13 @@ a.anchor-link {
 Тип элементов массива: int64
 Число измерений (осей): 1
 Размеры (форма): (5,)
+Число элементов массива: 5
 Размер каждого элемента, байт: 8
 </pre>
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[27]:</div>
 
 
 <div class="output_jpeg output_subarea output_execute_result">
@@ -12171,13 +12294,32 @@ WVQyhxgDkBmH41uf8NBfGf8A6KDq3/jn/wATRRQAf8NBfGf/AKKDq3/jn/xNH/DQXxn/AOig6t/4
 </div>
 </div>
 
-</div></div></section><section>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Существует 5 основных механизмов создания массивов:</p>
+<ol>
+<li>Преобразование других Python структур (lists, tuples)</li>
+<li>Внутренние способы NumPy для создания массивов (arange, ones, zeros и др.)</li>
+<li>Чтение массивов с диска (как стандартные, так и кастомные форматы данных)</li>
+<li>Создание массивов из "сырых" байтов, с использованием строк или буфферов</li>
+<li>Использование специальных функций (из модуля random)</li>
+</ol>
+
+</div>
+</div>
+</div>
+</aside></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># как Python `range`, но может работать не только с целыми числами</span>
 <span class="n">describe_array</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
 <span class="n">Image</span><span class="p">(</span><span class="s1">&#39;1d_array.jpeg&#39;</span><span class="p">)</span>
 </pre></div>
@@ -12196,12 +12338,13 @@ WVQyhxgDkBmH41uf8NBfGf8A6KDq3/jn/wATRRQAf8NBfGf/AKKDq3/jn/xNH/DQXxn/AOig6t/4
 Тип элементов массива: int64
 Число измерений (осей): 1
 Размеры (форма): (5,)
+Число элементов массива: 5
 Размер каждого элемента, байт: 8
 </pre>
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[28]:</div>
 
 
 <div class="output_jpeg output_subarea output_execute_result">
@@ -12390,13 +12533,25 @@ WVQyhxgDkBmH41uf8NBfGf8A6KDq3/jn/wATRRQAf8NBfGf/AKKDq3/jn/xNH/DQXxn/AOig6t/4
 </div>
 </div>
 
-</div></section><section>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Для создания массивов чисел с плавающей точкой лучше использовать следующий метод</p>
+
+</div>
+</div>
+</div>
+</aside></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int64&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int64&#39;</span><span class="p">)</span> <span class="c1"># массив из 5 элементов с равными расстояниями между ними</span>
 <span class="n">describe_array</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
 <span class="n">Image</span><span class="p">(</span><span class="s1">&#39;1d_array.jpeg&#39;</span><span class="p">)</span>
 </pre></div>
@@ -12609,7 +12764,20 @@ WVQyhxgDkBmH41uf8NBfGf8A6KDq3/jn/wATRRQAf8NBfGf/AKKDq3/jn/xNH/DQXxn/AOig6t/4
 </div>
 </div>
 
-</div></section></section><section><section>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>linspace</code> - размещает равномерно на линейной шкале (linear). Указали <code>dtype</code> строкой, чтобы получить такой же массив, как в предыдущих примерах. <code>dtype</code> может указываться разными способами.</p>
+<p><code>logspace</code> - на логарифмической шкале</p>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12621,10 +12789,10 @@ WVQyhxgDkBmH41uf8NBfGf8A6KDq3/jn/wATRRQAf8NBfGf/AKKDq3/jn/xNH/DQXxn/AOig6t/4
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span> <span class="c1"># массив размером 3х3, заполненный 1</span>
 <span class="n">describe_array</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
 <span class="n">Image</span><span class="p">(</span><span class="s1">&#39;2d_array.jpeg&#39;</span><span class="p">)</span>
 </pre></div>
@@ -12645,12 +12813,13 @@ WVQyhxgDkBmH41uf8NBfGf8A6KDq3/jn/wATRRQAf8NBfGf/AKKDq3/jn/xNH/DQXxn/AOig6t/4
 Тип элементов массива: int64
 Число измерений (осей): 2
 Размеры (форма): (3, 3)
+Число элементов массива: 9
 Размер каждого элемента, байт: 8
 </pre>
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[30]:</div>
 
 
 <div class="output_jpeg output_subarea output_execute_result">
@@ -12894,13 +13063,26 @@ Xmu67f3F5qN1MWnncjdI2ByeOtAH/9k=
 </div>
 </div>
 
-</div></div></section><section>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Операции над массивами выполняются поэлементно, то есть оператор <code>"*"</code> не вернет произведение матриц. Для получения произведения матриц есть метод <code>dot</code>. В Python 3.5+ есть оператор <code>"@"</code> (метод <code>matmul</code> добавлен в NumPy 1.10) для умножения матриц, который не всегда возвращает тот же результат, что и <code>dot</code>, поэтому здесь следует быть осторожным. В NumPy также существует унаследованный класс <code>matrix</code>, операции над его объектами выполняются по правилам линейной алгебры. Объекты <code>matrix</code> могут быть только двумерными. Для поэлементного перемножения объектов <code>matrix</code> нужно использовать <code>multiply</code>.</p>
+<p>Еще один вариант задания <code>dtype</code>.</p>
+
+</div>
+</div>
+</div>
+</aside></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>  <span class="c1"># np.array([1] * 9).reshape(3, 3)</span>
 <span class="n">describe_array</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
 <span class="n">Image</span><span class="p">(</span><span class="s1">&#39;2d_array.jpeg&#39;</span><span class="p">)</span>
 </pre></div>
@@ -12921,12 +13103,13 @@ Xmu67f3F5qN1MWnncjdI2ByeOtAH/9k=
 Тип элементов массива: int64
 Число измерений (осей): 2
 Размеры (форма): (3, 3)
+Число элементов массива: 9
 Размер каждого элемента, байт: 8
 </pre>
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[71]:</div>
 
 
 <div class="output_jpeg output_subarea output_execute_result">
@@ -13170,47 +13353,25 @@ Xmu67f3F5qN1MWnncjdI2ByeOtAH/9k=
 </div>
 </div>
 
-</div></section><section>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Создаем такую же матрицу "ручным" способом. Также, мы можем взять array_like объект и придать ему нужную размерность, использовав метод <code>reshape</code></p>
+
+</div>
+</div>
+</div>
+</aside></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
-<span class="n">describe_array</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>array([[1, 0, 0],
-       [0, 1, 0],
-       [0, 0, 1]])
-Тип элементов массива: int64
-Число измерений (осей): 2
-Размеры (форма): (3, 3)
-Размер каждого элемента, байт: 8
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>  <span class="c1"># создаем матрицу 3х3 с заданной главной диагональю</span>
 <span class="n">describe_array</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
 </pre></div>
 
@@ -13230,6 +13391,7 @@ Xmu67f3F5qN1MWnncjdI2ByeOtAH/9k=
 Тип элементов массива: int64
 Число измерений (осей): 2
 Размеры (форма): (3, 3)
+Число элементов массива: 9
 Размер каждого элемента, байт: 8
 </pre>
 </div>
@@ -13238,7 +13400,69 @@ Xmu67f3F5qN1MWnncjdI2ByeOtAH/9k=
 </div>
 </div>
 
-</div></section></section><section><section>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Функция <code>diag</code> позволяет создать матрицу или получить диагональ матрицы.</p>
+<p>Может принимать два параметра - array_like объект <code>v</code> и целое число <code>k</code> - номер диагонали. По умолчанию <code>k=0</code> - главная диагональ, если <code>k&gt;0</code> - выше главной и наоборот.</p>
+<p>Если параметр <code>v</code> одномерный массив, то в результате мы получим матрицу с массивом <code>v</code> на <code>k</code>-той диагонали.</p>
+<p>Если параметр <code>v</code> двумерный массив, то в результате мы получим массив, содержащий копию <code>k</code>-той диагонали матрицы <code>v</code>.</p>
+
+</div>
+</div>
+</div>
+</aside></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>  <span class="c1"># создаем единичную матрицу размерами 3х3</span>
+<span class="n">describe_array</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>array([[1, 0, 0],
+       [0, 1, 0],
+       [0, 0, 1]])
+Тип элементов массива: int64
+Число измерений (осей): 2
+Размеры (форма): (3, 3)
+Число элементов массива: 9
+Размер каждого элемента, байт: 8
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Еще есть похожая функция <code>eye</code>, который позволяет создавать матрицы не только квадратной формы и с единицами не только на главной диагонали.</p>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -13250,10 +13474,10 @@ Xmu67f3F5qN1MWnncjdI2ByeOtAH/9k=
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">three_d_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int64&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">three_d_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int64&#39;</span><span class="p">)</span>  <span class="c1"># создаем трехмерный массив 3х3х5, заполненный 0</span>
 <span class="n">describe_array</span><span class="p">(</span><span class="n">three_d_array</span><span class="p">)</span>
 </pre></div>
 
@@ -13281,6 +13505,7 @@ Xmu67f3F5qN1MWnncjdI2ByeOtAH/9k=
 Тип элементов массива: int64
 Число измерений (осей): 3
 Размеры (форма): (3, 3, 5)
+Число элементов массива: 45
 Размер каждого элемента, байт: 8
 </pre>
 </div>
@@ -14094,19 +14319,31 @@ CiiigD//2Q==
 </div>
 </div>
 
-</div></section></section><section><section>
+</div><aside class="notes">
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#1044;&#1086;&#1089;&#1090;&#1091;&#1087;-&#1082;-&#1101;&#1083;&#1077;&#1084;&#1077;&#1085;&#1090;&#1072;&#1084;-&#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1072;-NumPy">&#1044;&#1086;&#1089;&#1090;&#1091;&#1087; &#1082; &#1101;&#1083;&#1077;&#1084;&#1077;&#1085;&#1090;&#1072;&#1084; &#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1072; NumPy<a class="anchor-link" href="#&#1044;&#1086;&#1089;&#1090;&#1091;&#1087;-&#1082;-&#1101;&#1083;&#1077;&#1084;&#1077;&#1085;&#1090;&#1072;&#1084;-&#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1072;-NumPy">&#182;</a></h1>
+<p>NumPy позволяет создавать массивы с количеством измерений большим 3, но т.к. сложно представить графическое отображение таких массивов, остановимся на трех измерениях. Принципы работы с N-мерными массивами такие же, как были описаны выше.</p>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#1044;&#1086;&#1089;&#1090;&#1091;&#1087;-&#1082;-&#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1072;&#1084;-NumPy">&#1044;&#1086;&#1089;&#1090;&#1091;&#1087; &#1082; &#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1072;&#1084; NumPy<a class="anchor-link" href="#&#1044;&#1086;&#1089;&#1090;&#1091;&#1087;-&#1082;-&#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1072;&#1084;-NumPy">&#182;</a></h1>
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
@@ -14123,12 +14360,13 @@ CiiigD//2Q==
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>array([[ 0.40520462,  0.28145634,  0.05130314],
-       [ 0.97812786,  0.95614019,  0.87531462],
-       [ 0.05908155,  0.4062013 ,  0.0238672 ]])
+<pre>array([[ 0.66204412,  0.81137407,  0.08444227],
+       [ 0.37665832,  0.38300806,  0.95649731],
+       [ 0.93586201,  0.67073176,  0.10311849]])
 Тип элементов массива: float64
 Число измерений (осей): 2
 Размеры (форма): (3, 3)
+Число элементов массива: 9
 Размер каждого элемента, байт: 8
 </pre>
 </div>
@@ -14137,16 +14375,28 @@ CiiigD//2Q==
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Создадим двумерный массив размерами 3х3, заполненный случайными значениями</p>
+
+</div>
+</div>
+</div>
+</aside></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Матрица:</span><span class="se">\n</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">matrix</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Вторая строка:&#39;</span><span class="p">,</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Третий столбец:&#39;</span><span class="p">,</span> <span class="n">matrix</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Первый элемент третьей строки:&#39;</span><span class="p">,</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Третий (последний) столбец:&#39;</span><span class="p">,</span> <span class="n">matrix</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># [row[-1] for row in matrix]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Первый элемент третьей строки:&#39;</span><span class="p">,</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1"># matrix[2][0]</span>
 </pre></div>
 
 </div>
@@ -14160,12 +14410,12 @@ CiiigD//2Q==
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Матрица:
-[[ 0.40520462  0.28145634  0.05130314]
- [ 0.97812786  0.95614019  0.87531462]
- [ 0.05908155  0.4062013   0.0238672 ]]
-Вторая строка: [ 0.97812786  0.95614019  0.87531462]
-Третий столбец: [ 0.05130314  0.87531462  0.0238672 ]
-Первый элемент третьей строки: 0.0590815490621
+[[ 0.66204412  0.81137407  0.08444227]
+ [ 0.37665832  0.38300806  0.95649731]
+ [ 0.93586201  0.67073176  0.10311849]]
+Вторая строка: [ 0.37665832  0.38300806  0.95649731]
+Третий (последний) столбец: [ 0.08444227  0.95649731  0.10311849]
+Первый элемент третьей строки: 0.935862012915
 </pre>
 </div>
 </div>
@@ -14173,13 +14423,28 @@ CiiigD//2Q==
 </div>
 </div>
 
-</div><div class="fragment">
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Так выглядит наша матрица.</p>
+<p>Пока все так же, как в обычном Python.</p>
+<p>Массивы в NumPy поддерживают многомерные индексы. Так, в Python мы бы получили TypeError.</p>
+<p>В Python здесь мы тоже получим TypeError. NumPy также поддерживает второй вариант индексирования, но он будет работать медленнее, так как создается временный массив при первом индексировании.</p>
+
+</div>
+</div>
+</div>
+</aside><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>  <span class="c1"># for elem in matrix[1]: elem = 0.5</span>
 <span class="n">matrix</span>
 </pre></div>
 
@@ -14191,13 +14456,13 @@ CiiigD//2Q==
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[64]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[ 0.40520462,  0.28145634,  0.05130314],
+<pre>array([[ 0.66204412,  0.81137407,  2.71828183],
        [ 0.5       ,  0.5       ,  0.5       ],
-       [ 0.05908155,  0.4062013 ,  0.0238672 ]])</pre>
+       [ 0.93586201,  0.67073176,  0.10311849]])</pre>
 </div>
 
 </div>
@@ -14205,13 +14470,64 @@ CiiigD//2Q==
 </div>
 </div>
 
-</div></div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Hello, world!&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">]</span> <span class="o">*</span> <span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">matrix</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[70]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 0.66204412,  0.81137407,  2.71828183],
+       [ 0.2       ,  0.2       ,  0.2       ],
+       [ 0.93586201,  0.67073176,  0.10311849]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Broadcasting - позволяет нам работать со входными данными разных размеров. Здесь мы присваиваем 0.5 каждому элементу второй строки.</p>
+<p>Есть 4 правила broadcasting:</p>
+<ol>
+<li>All input arrays with ndim smaller than the input array of largest ndim, have 1’s prepended to their shapes.</li>
+<li>The size in each dimension of the output shape is the maximum of all the input sizes in that dimension.</li>
+<li>An input can be used in the calculation if its size in a particular dimension either matches the output size in that dimension, or has value exactly 1.</li>
+<li>If an input has a dimension size of 1 in its shape, the first data entry in that dimension will be used for all calculations along that dimension. In other words, the stepping machinery of the ufunc will simply not step along that dimension (the stride will be 0 for that dimension).</li>
+</ol>
+
+</div>
+</div>
+</div>
+</aside></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Hello, world!&#39;</span>  <span class="c1"># matrix[1][1] = &#39;Hello, world!&#39;</span>
 </pre></div>
 
 </div>
@@ -14227,8 +14543,8 @@ CiiigD//2Q==
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-14-dce008357541&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>matrix<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;Hello, world!&#39;</span>
+<span class="ansi-green-fg">&lt;ipython-input-57-e12ef2948d65&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>matrix<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;Hello, world!&#39;</span>  <span class="ansi-red-fg"># matrix[1][1] = &#39;Hello, world!&#39;</span>
 
 <span class="ansi-red-fg">ValueError</span>: could not convert string to float: &#39;Hello, world!&#39;</pre>
 </div>
@@ -14237,7 +14553,19 @@ CiiigD//2Q==
 </div>
 </div>
 
-</div></div></section><section>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Как упоминалось выше, NumPy массивы однородны (гомогенны), поэтому при попытке присвоить строку элементу массива, <code>dtype</code> у которого число с плавающей точкой, мы получим ValueError. В чистом же Python такое присваивание работает.</p>
+
+</div>
+</div>
+</div>
+</aside></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
@@ -14269,13 +14597,25 @@ CiiigD//2Q==
 </div>
 </div>
 
-</div><div class="fragment">
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Присвоим второму элементу второй строки число Пи.</p>
+
+</div>
+</div>
+</div>
+</aside><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">e</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">e</span>
 <span class="n">matrix</span>
 </pre></div>
 
@@ -14287,13 +14627,13 @@ CiiigD//2Q==
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[60]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[ 0.40520462,  0.28145634,  2.71828183],
-       [ 0.5       ,  3.14159265,  2.71828183],
-       [ 0.05908155,  0.4062013 ,  2.71828183]])</pre>
+<pre>array([[ 0.66204412,  0.81137407,  2.71828183],
+       [ 0.37665832,  0.38300806,  2.71828183],
+       [ 0.93586201,  0.67073176,  0.10311849]])</pre>
 </div>
 
 </div>
@@ -14301,7 +14641,19 @@ CiiigD//2Q==
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>В последнем столбце присвоим элементам с первого по предпоследний основание натурального логарифма.</p>
+
+</div>
+</div>
+</div>
+</aside></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -14311,8 +14663,9 @@ CiiigD//2Q==
 <li><a href="https://ipython.org/">https://ipython.org/</a></li>
 <li><a href="https://www.continuum.io/downloads">https://www.continuum.io/downloads</a></li>
 <li><a href="https://docs.scipy.org/doc/numpy/reference/">https://docs.scipy.org/doc/numpy/reference/</a></li>
-<li><a href="https://docs.scipy.org/doc/numpy-dev/user/quickstart.html">https://docs.scipy.org/doc/numpy-dev/user/quickstart.html</a></li>
+<li><a href="https://docs.scipy.org/doc/numpy/user/quickstart.html">https://docs.scipy.org/doc/numpy/user/quickstart.html</a></li>
 <li><a href="https://docs.scipy.org/doc/numpy/reference/routines.html">https://docs.scipy.org/doc/numpy/reference/routines.html</a></li>
+<li><a href="https://docs.scipy.org/doc/numpy/reference/ufuncs.html">https://docs.scipy.org/doc/numpy/reference/ufuncs.html</a></li>
 </ul>
 <h2 id="&#1057;&#1083;&#1072;&#1081;&#1076;&#1099;-&#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099;-&#1087;&#1086;-&#1089;&#1089;&#1099;&#1083;&#1082;&#1077;:">&#1057;&#1083;&#1072;&#1081;&#1076;&#1099; &#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099; &#1087;&#1086; &#1089;&#1089;&#1099;&#1083;&#1082;&#1077;:<a class="anchor-link" href="#&#1057;&#1083;&#1072;&#1081;&#1076;&#1099;-&#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099;-&#1087;&#1086;-&#1089;&#1089;&#1099;&#1083;&#1082;&#1077;:">&#182;</a></h2><p><a href="https://github.com/antsyferov/numpy_slides">https://github.com/antsyferov/numpy_slides</a></p>
 
