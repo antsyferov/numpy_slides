@@ -16,7 +16,7 @@
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="reveal.js/css/reveal.css">
-<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -58,7 +58,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
     <!-- End of mathjax configuration -->
 
 <!-- Get Font-awesome from cdn -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -11834,7 +11834,7 @@ a.anchor-link {
 <li>Что такое NumPy?</li>
 <li>Для чего используется?</li>
 <li>Создание массивов.</li>
-<li>Доступ к массивам.</li>
+<li>Обработка массивов.</li>
 </ol>
 
 </div>
@@ -11879,6 +11879,7 @@ a.anchor-link {
 <li>Линейная алгебра;</li>
 <li>Биология;</li>
 <li>Машинное обучение;</li>
+<li>Астрономия;</li>
 <li>и многие другие...</li>
 </ul>
 
@@ -11905,7 +11906,7 @@ a.anchor-link {
 <h1 id="&#1048;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;-NumPy">&#1048;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077; NumPy<a class="anchor-link" href="#&#1048;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;-NumPy">&#182;</a></h1><ul>
 <li><strong>SciPy</strong> - фундаментальная библиотека для научных вычислений</li>
 <li><strong>Matplotlib</strong> - мощная библиотека для визуализации</li>
-<li><strong>IPython</strong> - улучшенная интерактивная консоль (<code>pip install ipython[all]</code>)</li>
+<li><strong>IPython</strong> - улучшенная интерактивная консоль</li>
 <li><strong>SymPy</strong> - символьные вычисления</li>
 <li><strong>pandas</strong> - структуры данных и их анализ</li>
 <li><strong>scikit-learn</strong> - машинное обучение</li>
@@ -11934,7 +11935,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#1057;&#1086;&#1079;&#1076;&#1072;&#1085;&#1080;&#1077;-&#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1086;&#1074;-&#1089;-&#1080;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;&#1084;-&#1084;&#1086;&#1076;&#1091;&#1083;&#1103;-NumPy">&#1057;&#1086;&#1079;&#1076;&#1072;&#1085;&#1080;&#1077; &#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1086;&#1074; &#1089; &#1080;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;&#1084; &#1084;&#1086;&#1076;&#1091;&#1083;&#1103; NumPy<a class="anchor-link" href="#&#1057;&#1086;&#1079;&#1076;&#1072;&#1085;&#1080;&#1077;-&#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1086;&#1074;-&#1089;-&#1080;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;&#1084;-&#1084;&#1086;&#1076;&#1091;&#1083;&#1103;-NumPy">&#182;</a></h1>
+<h1 id="&#1057;&#1086;&#1079;&#1076;&#1072;&#1085;&#1080;&#1077;-&#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1086;&#1074;--NumPy">&#1057;&#1086;&#1079;&#1076;&#1072;&#1085;&#1080;&#1077; &#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1086;&#1074;  NumPy<a class="anchor-link" href="#&#1057;&#1086;&#1079;&#1076;&#1072;&#1085;&#1080;&#1077;-&#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1086;&#1074;--NumPy">&#182;</a></h1>
 </div>
 </div>
 </div><div class="fragment">
@@ -11959,7 +11960,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>NumPy массивы состоят из 2 основных компонентов - буфер данных (то, что понимаем под массивом в C или Fortran - непрерывный блок памяти фиксированной длины) и информация о данных.</p>
+<p>NumPy массивы состоят из 2 основных компонентов - буфер данных (то, что мы понимаем под массивом в C или Fortran - непрерывный блок памяти фиксированной длины) и информация о данных.</p>
 <ol>
 <li>Реализованы на C и Fortran</li>
 <li>Могут хранить данные только одного типа, но типы могут быть не только скалярными</li>
@@ -11975,27 +11976,29 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  <span class="c1"># так принято импортировать NumPy</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># так принято импортировать NumPy</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-</div></div></section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rows</span> <span class="o">=</span> <span class="mi">1000</span>
-<span class="n">columns</span> <span class="o">=</span> <span class="mi">2000</span>
-
-<span class="n">np_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">columns</span><span class="p">)</span>  <span class="c1"># ndarray со случайными значениями размерами 1000 * 2000</span>
-<span class="n">py_list</span> <span class="o">=</span> <span class="n">np_array</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>  <span class="c1"># преобразует ndarray в Python list</span>
-
-<span class="o">%</span><span class="k">timeit</span> [[elem ** 2 for elem in row] for row in py_list]  # &quot;магическая&quot; команда IPython
-<span class="o">%</span><span class="k">timeit</span> np_array ** 2  # broadcasting - возводим в квадрат каждый элемент массива
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rows</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">2000</span>
+<span class="c1"># ndarray размерами 1000х2000, заполненный случайными значениями </span>
+<span class="n">np_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">columns</span><span class="p">)</span>
+<span class="c1"># преобразует ndarray в Python list</span>
+<span class="n">py_list</span> <span class="o">=</span> <span class="n">np_array</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="c1"># &quot;магическая&quot; команда IPython</span>
+<span class="o">%</span><span class="k">timeit</span> [[elem ** 2 for elem in row] for row in py_list]
+<span class="c1"># broadcasting - возводим в квадрат каждый элемент массива</span>
+<span class="o">%</span><span class="k">timeit</span> np_array ** 2
 </pre></div>
 
 </div>
@@ -12008,8 +12011,36 @@ a.anchor-link {
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1 loop, best of 3: 200 ms per loop
-100 loops, best of 3: 3.04 ms per loop
+<pre>1 loop, best of 3: 209 ms per loop
+100 loops, best of 3: 3.18 ms per loop
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">timeit</span> np_array = np.random.rand(rows, columns)
+np_array **= 2
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>100 loops, best of 3: 1.94 ms per loop
 </pre>
 </div>
 </div>
@@ -12029,19 +12060,19 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</aside><div class="fragment">
+</aside></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>  <span class="c1"># для отображения изображений в IPython блокноте</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
 <span class="k">def</span> <span class="nf">describe_array</span><span class="p">(</span><span class="n">np_array</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">np_array</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Тип элементов массива: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np_array</span><span class="o">.</span><span class="n">dtype</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Тип элементов массива: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">np_array</span><span class="o">.</span><span class="n">dtype</span><span class="p">)))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Число измерений (осей): </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np_array</span><span class="o">.</span><span class="n">ndim</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Размеры (форма): </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np_array</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>  <span class="c1"># кортеж (длиной `ndim`) длины массивов по каждой оси</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Число элементов массива: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np_array</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>  <span class="c1"># произведение `np.prod()` элементов `shape`</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Размеры (форма): </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np_array</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>  
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Число элементов массива: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np_array</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Размер каждого элемента, байт: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np_array</span><span class="o">.</span><span class="n">itemsize</span><span class="p">))</span>
 </pre></div>
 
@@ -12060,12 +12091,13 @@ a.anchor-link {
 <p><code>repr</code> - спросить, что о нем знают</p>
 <p><code>dtype</code> - data type</p>
 <p><code>ndim</code> - number of dimensions</p>
-<p><code>shape</code> может использоваться для изменения формы массива, если количество элементов останется неизменным (<code>np_array.shape = &lt;tuple с новыми размерами&gt;</code>)</p>
+<p><code>shape</code> - кортеж (длиной <code>ndim</code>) длины массивов по каждой оси. Vожет использоваться для изменения формы массива, если количество элементов останется неизменным (<code>np_array.shape = &lt;tuple с новыми размерами&gt;</code>)</p>
+<p><code>size</code> - произведение <code>np.prod()</code> элементов <code>shape</code></p>
 
 </div>
 </div>
 </div>
-</aside></div></section></section><section><section>
+</aside></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12077,10 +12109,10 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>  <span class="c1"># конвертируем Python массиво-подобный объект в массив</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
 <span class="n">describe_array</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
 <span class="n">Image</span><span class="p">(</span><span class="s1">&#39;1d_array.jpeg&#39;</span><span class="p">)</span>
 </pre></div>
@@ -12096,7 +12128,7 @@ a.anchor-link {
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>array([0, 2, 4, 6, 8])
-Тип элементов массива: int64
+Тип элементов массива: dtype(&#39;int64&#39;)
 Число измерений (осей): 1
 Размеры (форма): (5,)
 Число элементов массива: 5
@@ -12105,7 +12137,7 @@ a.anchor-link {
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
 
 
 <div class="output_jpeg output_subarea output_execute_result">
@@ -12316,242 +12348,10 @@ WVQyhxgDkBmH41uf8NBfGf8A6KDq3/jn/wATRRQAf8NBfGf/AKKDq3/jn/xNH/DQXxn/AOig6t/4
 </aside></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># как Python `range`, но может работать не только с целыми числами</span>
-<span class="n">describe_array</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
-<span class="n">Image</span><span class="p">(</span><span class="s1">&#39;1d_array.jpeg&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>array([0, 2, 4, 6, 8])
-Тип элементов массива: int64
-Число измерений (осей): 1
-Размеры (форма): (5,)
-Число элементов массива: 5
-Размер каждого элемента, байт: 8
-</pre>
-</div>
-</div>
-
-<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
-
-
-<div class="output_jpeg output_subarea output_execute_result">
-<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEP
-ERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4e
-Hh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCABkAekDASIA
-AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
-AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
-ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
-p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
-AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
-BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
-U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
-uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDoPgv+
-zJ8KfFPwo8MeItWsNTe/1HTori4ZL91Uuy5OAOldf/wyN8GP+gZq3/gxeu5/Zq/5ID4H/wCwNB/6
-DXodAHgf/DI3wY/6Bmrf+DF6P+GRvgx/0DNW/wDBi9e+UUAeB/8ADI3wY/6Bmrf+DF6P+GRvgx/0
-DNW/8GL175RQB4H/AMMjfBj/AKBmrf8Agxej/hkb4Mf9AzVv/Bi9e+UUAeB/8MjfBj/oGat/4MXo
-/wCGRvgx/wBAzVv/AAYvXvlFAHgf/DI3wY/6Bmrf+DF6P+GRvgx/0DNW/wDBk9e+UUAfEH7JPwG+
-HnxH8AaxrPiezv5ru016exiMN20YESRQsAQOpy7c17H/AMMjfBj/AKBmrf8Agxes3/gn1/ySTxH/
-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
-1xH2WP1b86KKAP/Z
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div><aside class="notes">
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Для создания массивов чисел с плавающей точкой лучше использовать следующий метод</p>
-
-</div>
-</div>
-</div>
-</aside></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int64&#39;</span><span class="p">)</span> <span class="c1"># массив из 5 элементов с равными расстояниями между ними</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">describe_array</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
 <span class="n">Image</span><span class="p">(</span><span class="s1">&#39;1d_array.jpeg&#39;</span><span class="p">)</span>
 </pre></div>
@@ -12567,7 +12367,7 @@ WVQyhxgDkBmH41uf8NBfGf8A6KDq3/jn/wATRRQAf8NBfGf/AKKDq3/jn/xNH/DQXxn/AOig6t/4
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>array([0, 2, 4, 6, 8])
-Тип элементов массива: int64
+Тип элементов массива: dtype(&#39;int64&#39;)
 Число измерений (осей): 1
 Размеры (форма): (5,)
 Число элементов массива: 5
@@ -12772,6 +12572,239 @@ WVQyhxgDkBmH41uf8NBfGf8A6KDq3/jn/wATRRQAf8NBfGf/AKKDq3/jn/xNH/DQXxn/AOig6t/4
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Как Python <code>range</code>, но может работать не только с целыми числами. Для создания массивов чисел с плавающей точкой лучше использовать следующий метод</p>
+
+</div>
+</div>
+</div>
+</aside></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int&#39;</span><span class="p">)</span>
+<span class="n">describe_array</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
+<span class="n">Image</span><span class="p">(</span><span class="s1">&#39;1d_array.jpeg&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>array([0, 2, 4, 6, 8])
+Тип элементов массива: dtype(&#39;int64&#39;)
+Число измерений (осей): 1
+Размеры (форма): (5,)
+Число элементов массива: 5
+Размер каждого элемента, байт: 8
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
+
+
+<div class="output_jpeg output_subarea output_execute_result">
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEP
+ERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4e
+Hh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCABkAekDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDoPgv+
+zJ8KfFPwo8MeItWsNTe/1HTori4ZL91Uuy5OAOldf/wyN8GP+gZq3/gxeu5/Zq/5ID4H/wCwNB/6
+DXodAHgf/DI3wY/6Bmrf+DF6P+GRvgx/0DNW/wDBi9e+UUAeB/8ADI3wY/6Bmrf+DF6P+GRvgx/0
+DNW/8GL175RQB4H/AMMjfBj/AKBmrf8Agxej/hkb4Mf9AzVv/Bi9e+UUAeB/8MjfBj/oGat/4MXo
+/wCGRvgx/wBAzVv/AAYvXvlFAHgf/DI3wY/6Bmrf+DF6P+GRvgx/0DNW/wDBk9e+UUAfEH7JPwG+
+HnxH8AaxrPiezv5ru016exiMN20YESRQsAQOpy7c17H/AMMjfBj/AKBmrf8Agxes3/gn1/ySTxH/
+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
+1xH2WP1b86KKAP/Z
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Массив из 5 элементов с равными расстояниями между ними, первый элемент равен 0, последний 8</p>
 <p><code>linspace</code> - размещает равномерно на линейной шкале (linear). Указали <code>dtype</code> строкой, чтобы получить такой же массив, как в предыдущих примерах. <code>dtype</code> может указываться разными способами.</p>
 <p><code>logspace</code> - на логарифмической шкале</p>
 
@@ -12790,300 +12823,10 @@ WVQyhxgDkBmH41uf8NBfGf8A6KDq3/jn/wATRRQAf8NBfGf/AKKDq3/jn/xNH/DQXxn/AOig6t/4
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span> <span class="c1"># массив размером 3х3, заполненный 1</span>
-<span class="n">describe_array</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
-<span class="n">Image</span><span class="p">(</span><span class="s1">&#39;2d_array.jpeg&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>array([[1, 1, 1],
-       [1, 1, 1],
-       [1, 1, 1]])
-Тип элементов массива: int64
-Число измерений (осей): 2
-Размеры (форма): (3, 3)
-Число элементов массива: 9
-Размер каждого элемента, байт: 8
-</pre>
-</div>
-</div>
-
-<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
-
-
-<div class="output_jpeg output_subarea output_execute_result">
-<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEP
-ERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4e
-Hh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAEsASwDASIA
-AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
-AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
-ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
-p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
-AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
-BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
-U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
-uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCr+yp+
-z/8ADv4j/CSDxP4nttSl1GW9niZobxo1KqwA49a9W/4ZD+DX/PjrP/gxb/Cj9gX/AJN4s/8AsJXX
-/oQr3+gDwD/hkP4Nf8+Os/8Agxb/AAo/4ZD+DX/PjrP/AIMW/wAK9/ooA8A/4ZD+DX/PjrP/AIMW
-/wAKP+GQ/g1/z46z/wCDFv8ACvf6KAPAP+GQ/g1/z46z/wCDFv8ACj/hkP4Nf8+Os/8Agxb/AAr3
-+igDwD/hkP4Nf8+Os/8Agxb/AAo/4ZD+DX/PjrP/AIMW/wAK9/ooA8A/4ZD+DX/PjrP/AIMW/wAK
-P+GQ/g1/z46z/wCDFv8ACvf6KAPinxD+z98ObL9qHw18P4LXURoeoaFNfXCG8YyGVWlAIbHA+ReK
-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
-Xmu67f3F5qN1MWnncjdI2ByeOtAH/9k=
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div><aside class="notes">
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Операции над массивами выполняются поэлементно, то есть оператор <code>"*"</code> не вернет произведение матриц. Для получения произведения матриц есть метод <code>dot</code>. В Python 3.5+ есть оператор <code>"@"</code> (метод <code>matmul</code> добавлен в NumPy 1.10) для умножения матриц, который не всегда возвращает тот же результат, что и <code>dot</code>, поэтому здесь следует быть осторожным. В NumPy также существует унаследованный класс <code>matrix</code>, операции над его объектами выполняются по правилам линейной алгебры. Объекты <code>matrix</code> могут быть только двумерными. Для поэлементного перемножения объектов <code>matrix</code> нужно использовать <code>multiply</code>.</p>
-<p>Еще один вариант задания <code>dtype</code>.</p>
-
-</div>
-</div>
-</div>
-</aside></div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>  <span class="c1"># np.array([1] * 9).reshape(3, 3)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int_</span><span class="p">)</span>
 <span class="n">describe_array</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
 <span class="n">Image</span><span class="p">(</span><span class="s1">&#39;2d_array.jpeg&#39;</span><span class="p">)</span>
 </pre></div>
@@ -13101,7 +12844,7 @@ Xmu67f3F5qN1MWnncjdI2ByeOtAH/9k=
 <pre>array([[1, 1, 1],
        [1, 1, 1],
        [1, 1, 1]])
-Тип элементов массива: int64
+Тип элементов массива: dtype(&#39;int64&#39;)
 Число измерений (осей): 2
 Размеры (форма): (3, 3)
 Число элементов массива: 9
@@ -13361,6 +13104,297 @@ Xmu67f3F5qN1MWnncjdI2ByeOtAH/9k=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Операции над массивами выполняются поэлементно, то есть оператор <code>"*"</code> не вернет произведение матриц. Для получения произведения матриц есть метод <code>dot</code>. В Python 3.5+ есть оператор <code>"@"</code> (метод <code>matmul</code> добавлен в NumPy 1.10) для умножения матриц, который не всегда возвращает тот же результат, что и <code>dot</code>, поэтому здесь следует быть осторожным. В NumPy также существует унаследованный класс <code>matrix</code>, операции над его объектами выполняются по правилам линейной алгебры. Объекты <code>matrix</code> могут быть только двумерными. Для поэлементного перемножения объектов <code>matrix</code> нужно использовать <code>multiply</code>.</p>
+<p>Еще один вариант задания <code>dtype</code>.</p>
+
+</div>
+</div>
+</div>
+</aside></div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="c1"># np.array([1] * 9).reshape(3, 3)</span>
+<span class="n">describe_array</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+<span class="n">Image</span><span class="p">(</span><span class="s1">&#39;2d_array.jpeg&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>array([[1, 1, 1],
+       [1, 1, 1],
+       [1, 1, 1]])
+Тип элементов массива: dtype(&#39;int64&#39;)
+Число измерений (осей): 2
+Размеры (форма): (3, 3)
+Число элементов массива: 9
+Размер каждого элемента, байт: 8
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
+
+
+<div class="output_jpeg output_subarea output_execute_result">
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEP
+ERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4e
+Hh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAEsASwDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCr+yp+
+z/8ADv4j/CSDxP4nttSl1GW9niZobxo1KqwA49a9W/4ZD+DX/PjrP/gxb/Cj9gX/AJN4s/8AsJXX
+/oQr3+gDwD/hkP4Nf8+Os/8Agxb/AAo/4ZD+DX/PjrP/AIMW/wAK9/ooA8A/4ZD+DX/PjrP/AIMW
+/wAKP+GQ/g1/z46z/wCDFv8ACvf6KAPAP+GQ/g1/z46z/wCDFv8ACj/hkP4Nf8+Os/8Agxb/AAr3
++igDwD/hkP4Nf8+Os/8Agxb/AAo/4ZD+DX/PjrP/AIMW/wAK9/ooA8A/4ZD+DX/PjrP/AIMW/wAK
+P+GQ/g1/z46z/wCDFv8ACvf6KAPinxD+z98ObL9qHw18P4LXURoeoaFNfXCG8YyGVWlAIbHA+ReK
+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
+Xmu67f3F5qN1MWnncjdI2ByeOtAH/9k=
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Создаем такую же матрицу "ручным" способом. Также, мы можем взять array_like объект и придать ему нужную размерность, использовав метод <code>reshape</code></p>
 
 </div>
@@ -13369,10 +13403,10 @@ Xmu67f3F5qN1MWnncjdI2ByeOtAH/9k=
 </aside></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>  <span class="c1"># создаем матрицу 3х3 с заданной главной диагональю</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="n">describe_array</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
 </pre></div>
 
@@ -13389,7 +13423,7 @@ Xmu67f3F5qN1MWnncjdI2ByeOtAH/9k=
 <pre>array([[1, 0, 0],
        [0, 2, 0],
        [0, 0, 3]])
-Тип элементов массива: int64
+Тип элементов массива: dtype(&#39;int64&#39;)
 Число измерений (осей): 2
 Размеры (форма): (3, 3)
 Число элементов массива: 9
@@ -13419,10 +13453,10 @@ Xmu67f3F5qN1MWnncjdI2ByeOtAH/9k=
 </aside></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>  <span class="c1"># создаем единичную матрицу размерами 3х3</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
 <span class="n">describe_array</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
 </pre></div>
 
@@ -13439,7 +13473,7 @@ Xmu67f3F5qN1MWnncjdI2ByeOtAH/9k=
 <pre>array([[1, 0, 0],
        [0, 1, 0],
        [0, 0, 1]])
-Тип элементов массива: int64
+Тип элементов массива: dtype(&#39;int64&#39;)
 Число измерений (осей): 2
 Размеры (форма): (3, 3)
 Число элементов массива: 9
@@ -13475,10 +13509,10 @@ Xmu67f3F5qN1MWnncjdI2ByeOtAH/9k=
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">three_d_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int64&#39;</span><span class="p">)</span>  <span class="c1"># создаем трехмерный массив 3х3х5, заполненный 0</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">three_d_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int64&#39;</span><span class="p">)</span>
 <span class="n">describe_array</span><span class="p">(</span><span class="n">three_d_array</span><span class="p">)</span>
 </pre></div>
 
@@ -13503,7 +13537,7 @@ Xmu67f3F5qN1MWnncjdI2ByeOtAH/9k=
        [[0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0]]])
-Тип элементов массива: int64
+Тип элементов массива: dtype(&#39;int64&#39;)
 Число измерений (осей): 3
 Размеры (форма): (3, 3, 5)
 Число элементов массива: 45
@@ -13518,7 +13552,7 @@ Xmu67f3F5qN1MWnncjdI2ByeOtAH/9k=
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;3d_array.jpeg&#39;</span><span class="p">)</span>
@@ -13532,7 +13566,7 @@ Xmu67f3F5qN1MWnncjdI2ByeOtAH/9k=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
 
 
 <div class="output_jpeg output_subarea output_execute_result">
@@ -14327,7 +14361,7 @@ CiiigD//2Q==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>NumPy позволяет создавать массивы с количеством измерений большим 3, но т.к. сложно представить графическое отображение таких массивов, остановимся на трех измерениях. Принципы работы с N-мерными массивами такие же, как были описаны выше.</p>
+<p>NumPy позволяет создавать массивы с количеством измерений большим 3. Принципы работы с ними такие же, как были описаны выше. Также можно создать массив с количеством осей равным 0.</p>
 
 </div>
 </div>
@@ -14338,13 +14372,13 @@ CiiigD//2Q==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#1044;&#1086;&#1089;&#1090;&#1091;&#1087;-&#1082;-&#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1072;&#1084;-NumPy">&#1044;&#1086;&#1089;&#1090;&#1091;&#1087; &#1082; &#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1072;&#1084; NumPy<a class="anchor-link" href="#&#1044;&#1086;&#1089;&#1090;&#1091;&#1087;-&#1082;-&#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1072;&#1084;-NumPy">&#182;</a></h1>
+<h1 id="&#1054;&#1073;&#1088;&#1072;&#1073;&#1086;&#1090;&#1082;&#1072;-ndarray">&#1054;&#1073;&#1088;&#1072;&#1073;&#1086;&#1090;&#1082;&#1072; ndarray<a class="anchor-link" href="#&#1054;&#1073;&#1088;&#1072;&#1073;&#1086;&#1090;&#1082;&#1072;-ndarray">&#182;</a></h1>
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
@@ -14361,10 +14395,10 @@ CiiigD//2Q==
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>array([[ 0.21913888,  0.87939924,  0.84649977],
-       [ 0.6388003 ,  0.15688257,  0.15599529],
-       [ 0.97794129,  0.3747326 ,  0.43403471]])
-Тип элементов массива: float64
+<pre>array([[ 0.03006087,  0.25997845,  0.10154724],
+       [ 0.50808599,  0.57481043,  0.08513724],
+       [ 0.44938678,  0.37258438,  0.53200322]])
+Тип элементов массива: dtype(&#39;float64&#39;)
 Число измерений (осей): 2
 Размеры (форма): (3, 3)
 Число элементов массива: 9
@@ -14391,12 +14425,12 @@ CiiigD//2Q==
 </aside></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Матрица:</span><span class="se">\n</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">matrix</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Вторая строка:&#39;</span><span class="p">,</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Третий (последний) столбец:&#39;</span><span class="p">,</span> <span class="n">matrix</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># [row[-1] for row in matrix]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Третий столбец:&#39;</span><span class="p">,</span> <span class="n">matrix</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># [row[-1] for row in matrix]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Первый элемент третьей строки:&#39;</span><span class="p">,</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1"># matrix[2][0]</span>
 </pre></div>
 
@@ -14411,12 +14445,12 @@ CiiigD//2Q==
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Матрица:
-[[ 0.21913888  0.87939924  0.84649977]
- [ 0.6388003   0.15688257  0.15599529]
- [ 0.97794129  0.3747326   0.43403471]]
-Вторая строка: [ 0.6388003   0.15688257  0.15599529]
-Третий (последний) столбец: [ 0.84649977  0.15599529  0.43403471]
-Первый элемент третьей строки: 0.977941287487
+[[ 0.03006087  0.25997845  0.10154724]
+ [ 0.50808599  0.57481043  0.08513724]
+ [ 0.44938678  0.37258438  0.53200322]]
+Вторая строка: [ 0.50808599  0.57481043  0.08513724]
+Третий столбец: [ 0.10154724  0.08513724  0.53200322]
+Первый элемент третьей строки: 0.449386782087
 </pre>
 </div>
 </div>
@@ -14442,42 +14476,10 @@ CiiigD//2Q==
 </aside><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>  <span class="c1"># for elem in matrix[1]: elem = 0.5</span>
-<span class="n">matrix</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[ 0.21913888,  0.87939924,  0.84649977],
-       [ 0.5       ,  0.5       ,  0.5       ],
-       [ 0.97794129,  0.3747326 ,  0.43403471]])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">]</span> <span class="o">*</span> <span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>  <span class="c1"># for i in matrix[1]: i = 0.5</span>
 <span class="n">matrix</span>
 </pre></div>
 
@@ -14493,9 +14495,9 @@ CiiigD//2Q==
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[ 0.21913888,  0.87939924,  0.84649977],
-       [ 0.2       ,  0.2       ,  0.2       ],
-       [ 0.97794129,  0.3747326 ,  0.43403471]])</pre>
+<pre>array([[ 0.03006087,  0.25997845,  0.10154724],
+       [ 0.5       ,  0.5       ,  0.5       ],
+       [ 0.44938678,  0.37258438,  0.53200322]])</pre>
 </div>
 
 </div>
@@ -14522,13 +14524,45 @@ CiiigD//2Q==
 </div>
 </div>
 </div>
-</aside></div><div class="fragment">
+</aside></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Hello, world!&#39;</span>  <span class="c1"># matrix[1][1] = &#39;Hello, world!&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">]</span> <span class="o">*</span> <span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">matrix</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[17]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 0.03006087,  0.25997845,  0.10154724],
+       [ 0.2       ,  0.2       ,  0.2       ],
+       [ 0.44938678,  0.37258438,  0.53200322]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>  <span class="c1"># matrix[1][1] = &#39;Hello&#39;</span>
 </pre></div>
 
 </div>
@@ -14544,10 +14578,10 @@ CiiigD//2Q==
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-17-e12ef2948d65&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>matrix<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;Hello, world!&#39;</span>  <span class="ansi-red-fg"># matrix[1][1] = &#39;Hello, world!&#39;</span>
+<span class="ansi-green-fg">&lt;ipython-input-18-04465640819e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>matrix<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;Hello&#39;</span>  <span class="ansi-red-fg"># matrix[1][1] = &#39;Hello&#39;</span>
 
-<span class="ansi-red-fg">ValueError</span>: could not convert string to float: &#39;Hello, world!&#39;</pre>
+<span class="ansi-red-fg">ValueError</span>: could not convert string to float: &#39;Hello&#39;</pre>
 </div>
 </div>
 
@@ -14569,7 +14603,7 @@ CiiigD//2Q==
 </aside></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
@@ -14584,13 +14618,13 @@ CiiigD//2Q==
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[18]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[19]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[ 0.21913888,  0.87939924,  0.84649977],
+<pre>array([[ 0.03006087,  0.25997845,  0.10154724],
        [ 0.2       ,  3.14159265,  0.2       ],
-       [ 0.97794129,  0.3747326 ,  0.43403471]])</pre>
+       [ 0.44938678,  0.37258438,  0.53200322]])</pre>
 </div>
 
 </div>
@@ -14613,7 +14647,7 @@ CiiigD//2Q==
 </aside><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">e</span>
@@ -14628,13 +14662,13 @@ CiiigD//2Q==
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[19]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[20]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[ 0.21913888,  0.87939924,  2.71828183],
+<pre>array([[ 0.03006087,  0.25997845,  2.71828183],
        [ 0.2       ,  3.14159265,  2.71828183],
-       [ 0.97794129,  0.3747326 ,  0.43403471]])</pre>
+       [ 0.44938678,  0.37258438,  0.53200322]])</pre>
 </div>
 
 </div>
@@ -14660,7 +14694,7 @@ CiiigD//2Q==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Resources">Resources<a class="anchor-link" href="#Resources">&#182;</a></h1><ul>
+<h1 id="Resources:">Resources:<a class="anchor-link" href="#Resources:">&#182;</a></h1><ul>
 <li><a href="https://ipython.org/">https://ipython.org/</a></li>
 <li><a href="https://www.continuum.io/downloads">https://www.continuum.io/downloads</a></li>
 <li><a href="https://docs.scipy.org/doc/numpy/reference/">https://docs.scipy.org/doc/numpy/reference/</a></li>
@@ -14668,7 +14702,7 @@ CiiigD//2Q==
 <li><a href="https://docs.scipy.org/doc/numpy/reference/routines.html">https://docs.scipy.org/doc/numpy/reference/routines.html</a></li>
 <li><a href="https://docs.scipy.org/doc/numpy/reference/ufuncs.html">https://docs.scipy.org/doc/numpy/reference/ufuncs.html</a></li>
 </ul>
-<h2 id="&#1057;&#1083;&#1072;&#1081;&#1076;&#1099;-&#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099;-&#1087;&#1086;-&#1089;&#1089;&#1099;&#1083;&#1082;&#1077;:">&#1057;&#1083;&#1072;&#1081;&#1076;&#1099; &#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099; &#1087;&#1086; &#1089;&#1089;&#1099;&#1083;&#1082;&#1077;:<a class="anchor-link" href="#&#1057;&#1083;&#1072;&#1081;&#1076;&#1099;-&#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099;-&#1087;&#1086;-&#1089;&#1089;&#1099;&#1083;&#1082;&#1077;:">&#182;</a></h2><p><a href="https://github.com/antsyferov/numpy_slides">https://github.com/antsyferov/numpy_slides</a></p>
+<h1 id="&#1057;&#1083;&#1072;&#1081;&#1076;&#1099;-&#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099;-&#1087;&#1086;-&#1089;&#1089;&#1099;&#1083;&#1082;&#1077;:">&#1057;&#1083;&#1072;&#1081;&#1076;&#1099; &#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099; &#1087;&#1086; &#1089;&#1089;&#1099;&#1083;&#1082;&#1077;:<a class="anchor-link" href="#&#1057;&#1083;&#1072;&#1081;&#1076;&#1099;-&#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099;-&#1087;&#1086;-&#1089;&#1089;&#1099;&#1083;&#1082;&#1077;:">&#182;</a></h1><p><a href="https://github.com/antsyferov/numpy_slides">https://github.com/antsyferov/numpy_slides</a></p>
 
 </div>
 </div>
@@ -14696,6 +14730,10 @@ require(
             controls: true,
             progress: true,
             history: true,
+            slideNumber: true,
+            previewLinks: true,
+            width: 1024,
+            height: 768,
 
             theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
             transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
